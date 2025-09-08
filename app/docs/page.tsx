@@ -258,7 +258,7 @@ OPENAI_API_KEY=your-openai-api-key`}
               <div>
                 <CodeBlock
                   language="js"
-                  filename="init.js"
+                  filename="index.js"
                   code={`import { useLLM, initLLM } from "./index.js";
 
 initLLM({
@@ -369,7 +369,7 @@ console.log(response.choices[0].message.content);`}
                 {showGeminiStreaming ? (
                   <CodeBlock
                     language="js"
-                    filename="streaming.js"
+                    filename="index.js"
                     code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What model is it?",
@@ -383,7 +383,7 @@ for await (const chunk of response )  {
                 ) : (
                   <CodeBlock
                     language="js"
-                    filename="streaming.js"
+                    filename="index.js"
                     code={`const response = await useLLM({
   model: "gpt-4o",
   prompt: "What model is it?",
@@ -413,7 +413,7 @@ for await (const chunk of response) {
                 {showGeminiProvider ? (
                   <CodeBlock
                     language="js"
-                    filename="system-prompt.js"
+                    filename="index.js"
                     code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What model is it?",
@@ -425,7 +425,7 @@ console.log(response.text);`}
                 ) : (
                   <CodeBlock
                     language="js"
-                    filename="system-prompt.js"
+                    filename="index.js"
                     code={`const response = await useLLM({
   model: "gpt-4o",
   prompt: "What model is it?",
@@ -458,7 +458,7 @@ console.log(response.choices[0].message.content);`}
                     </h4>
                     <CodeBlock
                       language="js"
-                      filename="vision.js"
+                      filename="index.js"
                       code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What image is it?",
@@ -475,7 +475,7 @@ console.log(response.text);`}
                     </h4>
                     <CodeBlock
                       language="js"
-                      filename="vision.js"
+                      filename="index.js"
                       code={`const response = await useLLM({
   model: "gpt-4o",
   prompt: "What image is it?",
@@ -494,7 +494,7 @@ console.log(response.choices[0].message.content);`}
                     </h4>
                     <CodeBlock
                       language="js"
-                      filename="vision.js"
+                      filename="index.js"
                       code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What image is it?",
@@ -511,7 +511,7 @@ console.log(response.text);`}
                     </h4>
                     <CodeBlock
                       language="js"
-                      filename="vision.js"
+                      filename="index.js"
                       code={`const response = await useLLM({
   model: "gpt-4o",
   prompt: "What image is it?",
@@ -530,7 +530,7 @@ console.log(response.choices[0].message.content);`}
                     </h4>
                     <CodeBlock
                       language="js"
-                      filename="vision.js"
+                      filename="index.js"
                       code={`import * as fs from "node:fs";
 
 const base64Image = fs.readFileSync("image.png", {
@@ -553,7 +553,7 @@ console.log(response.text);`}
                     </h4>
                     <CodeBlock
                       language="js"
-                      filename="vision.js"
+                      filename="index.js"
                       code={`import * as fs from "node:fs";
 
 const base64Image = fs.readFileSync("image.png", {
@@ -581,7 +581,7 @@ console.log(response.choices[0].message.content);`}
                 </div>
                 <CodeBlock
                   language="js"
-                  filename="vision.js"
+                  filename="index.js"
                   code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What video is it?",
@@ -601,7 +601,7 @@ console.log(response.text);`}
                 </div>
                 <CodeBlock
                   language="js"
-                  filename="audio.js"
+                  filename="index.js"
                   code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What audio is it?",
@@ -626,7 +626,7 @@ console.log(response.text);`}
                   </h4>
                   <CodeBlock
                     language="js"
-                    filename="document.js"
+                    filename="index.js"
                     code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What document is it?",
@@ -643,7 +643,7 @@ console.log(response.text);`}
                   </h4>
                   <CodeBlock
                     language="js"
-                    filename="document.js"
+                    filename="index.js"
                     code={`const response = await useLLM({
   model: "gemini-2.0-flash",
   prompt: "What document is it?",
