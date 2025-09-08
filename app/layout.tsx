@@ -14,7 +14,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "use-every-llm - Making LLM APIs easier than ever",
+  title: "use-every-llm - Using LLM APIs have never been easier",
   description:
     "Ship AI Apps with a single API that speaks Gemini and GPT today—Groq, Ollama, and more next. No lock-in, just ship.",
   generator: "v0.app",
