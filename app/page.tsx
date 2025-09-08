@@ -144,14 +144,14 @@ export default function HomePage() {
                   Get Started
                 </Button>
               </Link>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg bg-transparent"
               >
                 <Star className="mr-2 h-5 w-5" />
                 Star on GitHub
-              </Button>
+              </Button> */}
             </div>
 
             <p className="text-sm text-gray-400">
