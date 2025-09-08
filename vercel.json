@@ -4,12 +4,10 @@
   "framework": "nextjs",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 10,
-      "memory": 512
+    "api/**.{js,ts}": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 15,
+      "memory": 1024
     }
-  },
-  "regions": ["iad1"],
-  "public": false
+  }
 }
