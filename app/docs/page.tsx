@@ -142,7 +142,7 @@ export default function DocsPage() {
           {/* Header */}
           <div className="hidden md:flex items-center justify-between mb-8 pb-6 border-b border-gray-200 dark:border-gray-800">
             <div className="flex items-center gap-4">
-              <Github className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+              {/* <Github className="w-6 h-6 text-gray-600 dark:text-gray-400" /> */}
               {/* <span className="text-lg font-semibold mb-6 text-gray-600 dark:text-gray-400"> */}
                 {/* 1k Stars */}
               {/* </span> */}
