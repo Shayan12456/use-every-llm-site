@@ -664,7 +664,7 @@ export default function HomePage() {
                   Getting Started
                 </Button>
               </Link>
-              <Link href="https://github.com/Shayan12456/use-every-llm">
+              {/* <Link href="https://github.com/Shayan12456/use-every-llm">
                 <Button
                   size="lg"
                   variant="outline"
@@ -673,7 +673,7 @@ export default function HomePage() {
                   <Github className="mr-2 h-5 w-5" />
                   Star & Issues
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
