@@ -108,7 +108,8 @@ export default function HomePage() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
               Ship AI Apps with a single function that speaks Gemini and GPT
-              today — Claude, Groq, Ollama, and more next. No lock-in, just ship.
+              today — Claude, Groq, Ollama, and more next. No lock-in, just
+              ship.
             </p>
 
             <div className="mb-8">
@@ -144,14 +145,16 @@ export default function HomePage() {
                   Get Started
                 </Button>
               </Link>
-              {/* <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg bg-transparent"
-              >
-                <Star className="mr-2 h-5 w-5" />
-                Star on GitHub
-              </Button> */}
+              <Link href="https://github.com/Shayan12456/use-every-llm">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white cursor-pointer text-white hover:bg-white hover:text-[gray] px-8 py-3 text-lg bg-transparent"
+                >
+                  <Star className="mr-2 h-5 w-5" />
+                  Star on GitHub
+                </Button>
+              </Link>
             </div>
 
             <p className="text-sm text-gray-400">
@@ -664,7 +667,7 @@ export default function HomePage() {
                   Getting Started
                 </Button>
               </Link>
-              {/* <Link href="https://github.com/Shayan12456/use-every-llm">
+              <Link href="https://github.com/Shayan12456/use-every-llm">
                 <Button
                   size="lg"
                   variant="outline"
@@ -673,7 +676,7 @@ export default function HomePage() {
                   <Github className="mr-2 h-5 w-5" />
                   Star & Issues
                 </Button>
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>

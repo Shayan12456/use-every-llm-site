@@ -141,16 +141,15 @@ export default function DocsPage() {
 
           {/* Header */}
           <div className="hidden md:flex items-center justify-between mb-8 pb-6 border-b border-gray-200 dark:border-gray-800">
-            <div className="flex items-center gap-4">
-              {/* <Github className="w-6 h-6 text-gray-600 dark:text-gray-400" /> */}
-              {/* <span className="text-lg font-semibold mb-6 text-gray-600 dark:text-gray-400"> */}
-                {/* 1k Stars */}
-              {/* </span> */}
-              <span className="text-2xl font-bold">use-every-llm</span>
-            </div>
+            <Link href={"https://github.com/Shayan12456/use-every-llm"}>
+              <div className="flex items-center gap-4">
+                <Github className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+                <span className="text-2xl font-bold">use-every-llm</span>
+              </div>
+            </Link>
           </div>
 
-                    {/* Features Supported */}
+          {/* Features Supported */}
           <section id="features" className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Features Supported</h2>
             <Card className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-lg">
