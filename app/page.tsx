@@ -32,11 +32,8 @@ import { CodeBlock } from "@/components/ui/code-block";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import "@/styles/styles.css";
-import { hotjar } from 'react-hotjar'
-import { useEffect } from 'react'
 
 function FloatingShapes() {
-
   return (
     <>
       <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
@@ -87,10 +84,6 @@ export default function HomePage() {
     }, 2000);
   };
 
-    useEffect(() => {
-    hotjar.initialize({id:6546047,sv:6})
-  }, [])
-  
   return (
     <div className="min-h-screen bg-background">
       <div className="fixed top-4 right-4 z-30">
