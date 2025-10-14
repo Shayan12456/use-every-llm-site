@@ -10,7 +10,7 @@ export default function HotjarProvider() {
   // Initialize Hotjar once (production only)
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
-      hotjar.initialize(6546047, 6); // (hjid, hjsv)
+      hotjar.initialize({id:6546047,sv:6}); // (hjid, hjsv)
     }
   }, []);
 
