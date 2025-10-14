@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { FeedbackForm } from "@/components/ui/feedback-form";
 import { Toaster } from "@/components/ui/sonner";
 import { GoogleAnalytics } from '@next/third-parties/google'
-// app/layout.tsx
 import HotjarProvider from "./providers/HotjarProvider";
+import { Suspense } from "react";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} antialiased`}>
       <body className="font-sans">
-        <HotjarProvider />
+         <Suspense fallback={null}><HotjarProvider /></Suspense>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
