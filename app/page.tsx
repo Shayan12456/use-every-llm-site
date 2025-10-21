@@ -577,7 +577,7 @@ export default function HomePage() {
               Trust & Safety
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-3">Privacy</h3>
                 <p className="text-muted-foreground">
@@ -593,13 +593,13 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="text-xl font-semibold mb-3">Security</h3>
                 <p className="text-muted-foreground">
                   Env-based keys, recommended server-only usage for maximum
                   security.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
