@@ -258,12 +258,12 @@ OPENAI_API_KEY=your-openai-api-key`}
                 <CodeBlock
                   language="js"
                   filename="index.js"
-                  code={`import { useLLM, initLLM } from "./index.js";
+                  code={`import { useLLM, initLLM } from "use-every-llm";
 
 initLLM({
   openaiApiKey: process.env.OPENAI_API_KEY,
   googleApiKey: process.env.GEMINI_API_KEY,
-});}`}
+});`}
                 />
               </div>
             </div>
