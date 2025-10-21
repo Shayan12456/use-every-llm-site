@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@hookform/resolvers": "^3.10.0",
     "@next/third-parties": "^15.5.5",
     "@radix-ui/react-accordion": "1.2.2",

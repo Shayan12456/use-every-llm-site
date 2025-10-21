@@ -10,6 +10,7 @@ import { CodeBlock } from "@/components/ui/code-block";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useFeedbackStore } from "@/lib/store";
+import { useForm } from '@formspree/react';
 
 export default function DocsPage() {
   const { setIsOpen } = useFeedbackStore();
@@ -19,6 +20,7 @@ export default function DocsPage() {
   const [showGeminiStreaming, setShowGeminiStreaming] = useState(true);
   const [showGeminiProvider, setShowGeminiProvider] = useState(true);
   const [showGeminiEnv, setShowGeminiEnv] = useState(true);
+  const [state, handleSubmit] = useForm("xzzjqjle");
 
   useEffect(() => {
     setMounted(true);
@@ -29,7 +31,21 @@ export default function DocsPage() {
   }
 
   return (
+
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <div className="text-black dark:text-white flex justify-around pt-4">I would like to know more about upcoming features of use-every-llm, just send me helpful updates and announcements.
+<form onSubmit={handleSubmit} className="w-full max-w-sm flex flex-col sm:flex-row gap-3">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      className="flex-grow px-4 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+                    />
+                    <Button type="submit" disabled={state.succeeded} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
+                      {state.succeeded ? "Registered!" : "Register"}
+                    </Button>
+                  </form>
+</div>
       <div className="flex md:pl-64">
         {/* Sidebar */}
         <div className="w-64 bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 p-6 transition-colors duration-300 hidden md:block fixed left-0 top-0 h-screen overflow-y-auto">
@@ -694,6 +710,39 @@ console.log(response.text);`}
               </div>
             </div>
           </section>
+          <div className="mt-12">
+            <Card className="bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col items-center text-center">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Stay Updated</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-lg">
+                    I would like to know more about upcoming features of use-every-llm, just send me helpful updates and announcements.
+                  </p>
+                  <form onSubmit={handleSubmit} className="w-full max-w-sm flex flex-col sm:flex-row gap-3">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      className="flex-grow px-4 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+                    />
+                    <Button type="submit" disabled={state.succeeded} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
+                      {state.succeeded ? "Registered!" : "Register"}
+                    </Button>
+                  </form>
+                  {state.succeeded && (
+                    <p className="mt-4 text-sm text-green-600 dark:text-green-500">
+                      Thanks for registering! We'll be in touch soon.
+                    </p>
+                  )}
+                  {state.errors && (
+                    <p className="mt-4 text-sm text-red-600 dark:text-red-500">
+                      Something went wrong. Please try again.
+                    </p>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </div>

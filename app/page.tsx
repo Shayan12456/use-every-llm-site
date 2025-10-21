@@ -30,10 +30,12 @@ import { useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CodeBlock } from "@/components/ui/code-block";
 import { Switch } from "@/components/ui/switch";
+import { useForm } from '@formspree/react';
 import { Label } from "@/components/ui/label";
 import "@/styles/styles.css";
 
 function FloatingShapes() {
+
   return (
     <>
       <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
@@ -71,6 +73,7 @@ export default function HomePage() {
   const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>(
     {}
   );
+  const [state, handleSubmit] = useForm("xzzjqjle");
   const [showGeminiText, setShowGeminiText] = useState(true);
   const [showGeminiStreaming, setShowGeminiStreaming] = useState(true);
   const [showGeminiVision, setShowGeminiVision] = useState(true);
@@ -89,6 +92,19 @@ export default function HomePage() {
       <div className="fixed top-4 right-4 z-30">
         <ThemeToggle page="home" />
       </div>
+              <div className="bg-black text-white flex justify-around pt-4">I would like to know more about upcoming features of use-every-llm, just send me helpful updates and announcements.
+<form onSubmit={handleSubmit} className="w-full max-w-sm flex flex-col sm:flex-row gap-3">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      className="flex-grow px-4 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+                    />
+                    <Button type="submit" disabled={state.succeeded} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
+                      {state.succeeded ? "Registered!" : "Register"}
+                    </Button>
+                  </form>
+</div>
       {/* Hero Section with 3D Elements */}
       <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-background min-h-screen flex items-center">
         <div className="absolute inset-0 w-full h-full">
@@ -111,30 +127,6 @@ export default function HomePage() {
               today — Claude, Groq, Ollama, and more next. No lock-in, just
               ship.
             </p>
-
-            <div className="mb-8">
-              <div className="bg-black/80 backdrop-blur-sm border border-white/20 rounded-lg p-6 max-w-md mx-auto shadow-2xl">
-                <div className="flex items-center justify-between">
-                  <code className="text-white font-mono text-lg">
-                    npm i use-every-llm
-                  </code>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-white hover:bg-white/10"
-                    onClick={() =>
-                      copyToClipboard("npm i use-every-llm", "hero-install")
-                    }
-                  >
-                    {copiedStates["hero-install"] ? (
-                      <Check className="w-4 h-4" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
-                  </Button>
-                </div>
-              </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Link href="/docs">
